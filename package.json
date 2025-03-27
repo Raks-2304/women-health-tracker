@@ -1,0 +1,27 @@
+{
+    "name": "womens-health-tracker",
+    "version": "1.0.0",
+    "description": "Women's Health Data Analysis Backend",
+    "main": "src/app.js",
+    "scripts": {
+        "start": "node src/app.js",
+        "dev": "nodemon src/app.js",
+        "test": "jest"
+    },
+    "dependencies": {
+        "axios": "^1.8.4",
+        "bcryptjs": "^2.4.3",
+        "body-parser": "^2.2.0",
+        "cors": "^2.8.5",
+        "express": "^4.21.2",
+        "express-validator": "^6.15.0",
+        "jsonwebtoken": "^8.5.1",
+        "uuid": "^8.3.2"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.12"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC"
+}
