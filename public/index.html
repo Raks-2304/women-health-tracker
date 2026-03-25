@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>React App</title>
+    <style>
+      :root {
+        --primary-pink: #FF69B4;
+        --secondary-pink: #FFC0CB;
+        --background-pink: #FFF0F5;
+        --soft-shadow: 0 4px 6px rgba(255, 105, 180, 0.1);
+        --elegant-gradient: linear-gradient(135deg, #FF69B4, #FFC0CB);
+        --button-purple: #8A4FFF;
+        --button-teal: #20B2AA;
+      }
+
+      body {
+        background-color: var(--background-pink);
+        font-family: 'Poppins', 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        line-height: 1.6;
+        position: relative;
+        background-image: 
+          linear-gradient(
+            rgba(255, 255, 255, 0.8), 
+            rgba(255, 105, 180, 0.05)
+          ),
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 900' preserveAspectRatio='xMidYMid slice'%3E%3Cg fill-opacity='0.03'%3E%3Cpath fill='%23FF69B4' d='M0 0l100 50L200 0l100 50L400 0l100 50L600 0l100 50L800 0l100 50L1000 0l100 50L1200 0l100 50L1400 0l100 50L1600 0v900H0z'/%3E%3C/g%3E%3C/svg%3E");
+        background-blend-mode: soft-light, normal;
+        background-size: cover, cover;
+        background-position: center, center;
+        background-repeat: no-repeat, no-repeat;
+      }
+
+      body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0.03;
+        background-image: 
+          url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 200 200'%3E%3Cpath fill='%23FF69B4' fill-opacity='0.1' d='M100 0L0 100h200z'/%3E%3C/svg%3E");
+      }
+
+      .home-page {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 20px;
+        box-shadow: 
+          0 15px 35px rgba(255, 105, 180, 0.1),
+          0 20px 50px rgba(255, 105, 180, 0.08);
+        padding: 50px;
+        max-width: 700px;
+        width: 90%;
+        text-align: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative;
+        z-index: 10;
+        overflow: hidden;
+      }
+
+      .home-page:hover {
+        transform: scale(1.02);
+        box-shadow: 
+          0 20px 45px rgba(255, 105, 180, 0.15),
+          0 25px 60px rgba(255, 105, 180, 0.1);
+      }
+
+      .home-page::before {
+        content: "♀";
+        position: absolute;
+        top: -50px;
+        right: -50px;
+        font-size: 200px;
+        color: rgba(255, 105, 180, 0.05);
+        z-index: -1;
+        transform: rotate(-15deg);
+      }
+
+      h1 {
+        background: var(--elegant-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 3.5rem;
+        margin-bottom: 10px;
+        font-weight: bold;
+        text-shadow: 0 2px 4px rgba(255, 105, 180, 0.1);
+      }
+
+      .tagline {
+        color: var(--primary-pink);
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        font-weight: 300;
+        letter-spacing: 1px;
+      }
+
+      .button-container {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+        margin-top: 40px;
+      }
+
+      .pink-button {
+        background: #8A4FFF;
+        color: white;
+        border: none;
+        padding: 25px 50px;
+        border-radius: 50px;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 1.2rem;
+        box-shadow: 0 8px 15px rgba(138, 79, 255, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .pink-button:nth-child(2) {
+        background: #8A4FFF;
+        box-shadow: 0 8px 15px rgba(138, 79, 255, 0.3);
+      }
+
+      .pink-button:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(138, 79, 255, 0.4);
+      }
+
+      .pink-button:nth-child(2):hover {
+        box-shadow: 0 10px 20px rgba(32, 178, 170, 0.4);
+      }
+
+      .quote-section {
+        background-color: rgba(255, 105, 180, 0.05);
+        border-radius: 15px;
+        padding: 20px;
+        margin: 20px 0;
+        border: 1px solid rgba(255, 105, 180, 0.1);
+      }
+
+      .quote-section h3 {
+        color: var(--primary-pink);
+        margin-bottom: 10px;
+      }
+
+      .quote-section p {
+        font-style: italic;
+        color: #666;
+      }
+
+      @media (max-width: 600px) {
+        body {
+          background-size: cover, 10px 10px;
+        }
+
+        .home-page {
+          margin: 50px;
+          padding: 70px;
+        }
+        
+        .button-container {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .pink-button {
+          padding: 20px 40px;
+          font-size: 1.1rem;
+        }
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        .tagline {
+          font-size: 1rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+  </body>
+</html>

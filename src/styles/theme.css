@@ -1,0 +1,196 @@
+:root {
+  --primary-pink: #FF69B4;
+  --secondary-pink: #FFC0CB;
+  --background-pink: #FFF0F5;
+  --soft-shadow: 0 4px 6px rgba(255, 105, 180, 0.1);
+  --elegant-gradient: linear-gradient(135deg, #FF69B4, #FFC0CB);
+}
+
+body {
+  background-color: var(--background-pink);
+  font-family: 'Poppins', 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  line-height: 1.6;
+  position: relative;
+  background-image: 
+    linear-gradient(
+      rgba(255, 255, 255, 0.8), 
+      rgba(255, 105, 180, 0.05)
+    ),
+    url("../assets/bgpic.jpg");
+  background-blend-mode: soft-light, normal;
+  background-size: cover, cover;
+  background-position: center, center;
+  background-repeat: no-repeat, no-repeat;
+}
+
+.home-page {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 
+    0 15px 35px rgba(255, 105, 180, 0.1),
+    0 20px 50px rgba(255, 105, 180, 0.08);
+  padding: 50px;
+  max-width: 700px;
+  width: 90%;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.home-page::before {
+  content: "♀";
+  position: absolute;
+  top: -50px;
+  right: -10px;
+  font-size: 180px;
+  color: rgba(100, 8, 54, 0.958);
+  z-index: -1;
+  transform: rotate(-15deg);
+}
+
+.home-page:hover {
+  transform: scale(1.02);
+  box-shadow: 
+    0 20px 45px rgba(255, 105, 180, 0.511),
+    0 25px 60px rgba(255, 105, 180, 0.511);
+}
+
+h1 {
+  background: var(--elegant-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(255, 105, 180, 0.1);
+}
+
+.tagline {
+  color: var(--primary-pink);
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+/* Rest of the previous CSS remains the same */
+
+@media (max-width: 600px) {
+  .home-page {
+    margin: 20px;
+    padding: 30px;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+}
+
+.tracker-container {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.date-input {
+  padding: 10px;
+  border: 2px solid var(--primary-pink);
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.date-input:focus {
+  border-color: var(--secondary-pink);
+}
+
+.result {
+  background: var(--secondary-pink);
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: bold;
+  margin: 10px 0;
+}
+/*
+.period-tracker {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(255, 105, 180, 0.1);
+  padding: 30px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  margin: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.period-tracker h1 {
+  background: linear-gradient(135deg, #FF69B4, #FFC0CB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.8rem;
+  font-weight: bold;
+}
+
+.tracker-form label {
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+.tracker-form input {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #FF69B4;
+  border-radius: 5px;
+}
+
+.pink-button {
+  background: var(--elegant-gradient);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 15px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+.results {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #FF69B4;
+}
+
+.health-tips {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.health-tips h2 {
+  color: #FF69B4;
+}
+
+.health-tips ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+*/
